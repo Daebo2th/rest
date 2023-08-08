@@ -1,6 +1,7 @@
 package com.javassem.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.javassem.domain.BoardVO;
 
@@ -22,4 +23,5 @@ public interface BoardService {
 
 	// 글 목록 조회
 	List<BoardVO> getBoardList(BoardVO vo);
+	List<BoardVO> getBoardList2(Map<String,String> map);
 }

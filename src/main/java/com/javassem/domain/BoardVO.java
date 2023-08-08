@@ -19,7 +19,7 @@ public class BoardVO {
 	private String content;
 	private Date regDate;
 	private int cnt;
-	
+
 	public BoardVO(String title, String writer, String content) {
 		super();
 		this.title = title;

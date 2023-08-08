@@ -1,6 +1,7 @@
 package com.javassem.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,10 @@ public class BoardDAOImpl implements BoardDAO{
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		System.out.println("===> Mybatis getBoardList() 호출");
 		return mybatis.selectList("BoardDAO.getBoardList", vo);
+	}
+
+	public List<BoardVO> getBoardList2(Map<String,String> map) {
+		System.out.println("===> Mybatis getBoardList() 호출");
+		return mybatis.selectList("BoardDAO.getBoardList", map);
 	}
 }

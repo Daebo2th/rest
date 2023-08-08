@@ -1,6 +1,7 @@
 package com.javassem.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,5 +34,10 @@ public class BoardServiceImpl implements BoardService {
 
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		return boardDAO.getBoardList(vo);
+	}
+
+	@Override
+	public List<BoardVO> getBoardList2(Map<String,String> map) {
+		return boardDAO.getBoardList2(map);
 	}
 }
