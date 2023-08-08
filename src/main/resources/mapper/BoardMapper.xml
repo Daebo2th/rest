@@ -63,7 +63,7 @@
 		FROM rest_BOARD
 		<where>
 			<if test="searchCondition != null">
-				${searchCondition} LIKE '%${searchKeyword}%'
+				${searchCondition} LIKE '%'||${searchKeyword}||'%'
 			</if>
 		</where>		
 		ORDER BY SEQ DESC

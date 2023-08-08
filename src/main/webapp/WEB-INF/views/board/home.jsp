@@ -12,5 +12,6 @@
 <P>  The time on the server is ${serverTime}. </P>
 
 <a href="/board/getBoardList.do">리스트 보기</a>
+<a href="/getText">getTExt</a>
 </body>
 </html>

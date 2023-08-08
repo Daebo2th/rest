@@ -32,8 +32,8 @@ public class BoardController {
 
 
         Map<String, String> map = new HashMap<>();
-        map.put("searchCondition", "");
-        map.put("searchKeyword", "");
+        map.put("searchCondition", null);
+        map.put("searchKeyword", null);
         moddel.addAttribute("boardList", boardService.getBoardList2(map));
 
         return "board/getBoardList";
