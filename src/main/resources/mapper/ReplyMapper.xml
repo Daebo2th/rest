@@ -11,8 +11,8 @@
 		]]>
 	</insert>
 
-	<select id='selectAllReply' resultType='reply'>
-		SELECT * FROM rest_reply
+	<select id='selectAllReply' parameterType="Integer" resultType='reply'>
+		SELECT * FROM rest_reply where bno = #{bno}
 	</select>
 	
 	<delete id='deleteReply' parameterType='string'>

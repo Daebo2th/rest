@@ -17,8 +17,8 @@ public class ReplyServiceImpl {
 		return replyDAO.insertReply(vo);
 	}
 	
-	public List<ReplyVO> selectAllReply(){
-		return replyDAO.selectAllReply();
+	public List<ReplyVO> selectAllReply(int bno){
+		return replyDAO.selectAllReply(bno);
 	}
 	
 	public int deleteReply(String rno) {

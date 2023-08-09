@@ -13,7 +13,7 @@
 		INSERT INTO rest_board(SEQ, TITLE, WRITER, CONTENT, REGDATE, cnt)
 		VALUES(board_seq.nextval,
 			#{title}, #{writer}, #{content}, 
-			sysdate, 0)
+			current_timestamp, 0)
 		]]>
 	</insert>
 	
@@ -60,10 +60,10 @@
 	<select id="getBoardList" resultType="board"  parameterType="hashmap">
 		
 		SELECT *
-		FROM rest_BOARD
+		FROM REST_BOARD
 		<where>
 			<if test="searchCondition != null">
-				${searchCondition} LIKE '%'||${searchKeyword}||'%'
+				${searchCondition} LIKE '%${searchKeyword}%'
 			</if>
 		</where>		
 		ORDER BY SEQ DESC

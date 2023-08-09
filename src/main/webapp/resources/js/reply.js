@@ -10,7 +10,7 @@ $(function () {
             type: 'post',
             // [확인시] data : { replyText : $('#reply').val()},
             data: params,
-            url: '../replies/new',
+            url: '/replies/new',
             success: function (result) {
                 alert(result);
                 // 화면초기화
@@ -25,14 +25,15 @@ $(function () {
         }); // end of ajax
     }); // end of click
 
-
     // 댓글목록 출력하기
     replyList();
 
     function replyList() {
+
         $.ajax({
             type: 'get',
-            url: '../replies',
+            url: '/replies',
+            data: { "bno" : 2},
             dataType: 'json',
             success: function (result) {
                 //alert(result);
@@ -80,7 +81,7 @@ $(function () {
         } else if (btn.text() == '삭제') {
             $.ajax({
                 type: 'delete',
-                url: '../replies/' + rno,
+                url: '/replies/' + rno,
                 success: function (result) {
                     //alert(result);
                     replyList();	// 입력 후 목록보기
@@ -108,7 +109,7 @@ $(function () {
 
             $.ajax({
                 type: 'put',
-                url: '../replies/' + rno,
+                url: '/replies/' + rno,
                 data: JSON.stringify(params),
                 contentType: 'application/json; charset=utf-8',
                 success: function (result) {

@@ -18,9 +18,9 @@ public class ReplyDAOImpl implements ReplyDAO{
 		return mybatis.insert("ReplyDAO.insertReply", vo);
 	}
 
-	public List<ReplyVO> selectAllReply() {
+	public List<ReplyVO> selectAllReply(int bno) {
 		System.out.println("===> Mybatis selectAllReply() 호출");	
-		return mybatis.selectList("ReplyDAO.selectAllReply");
+		return mybatis.selectList("ReplyDAO.selectAllReply",bno);
 	}
 
 	@Override

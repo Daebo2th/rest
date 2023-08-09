@@ -1,12 +1,12 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>글 상세2</title>
 <script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
-<script src='../resources/js/reply.js' type="text/javascript"></script>
+<script src='/resources/js/reply.js' type="text/javascript"></script>
 </head>
 <body>
 		<h1>글 상세</h1>		
@@ -30,7 +30,7 @@
 				</tr>
 				<tr>
 					<td bgcolor="orange">등록일</td>
-					<td align="left">${board.regDate }</td>
+					<td align="left"><fmt:formatDate value="${board.regDate }" pattern="yyyy년MM월dd일 hh:mm"/> </td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">조회수</td>
